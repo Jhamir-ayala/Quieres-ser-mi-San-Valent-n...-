@@ -1,105 +1,269 @@
 <!DOCTYPE html>
-<html lang="en-US">
-	<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta charset="utf-8" />
-		<title>
-		</title>
-		<style>
-			body { line-height:115%; font-family:Cambria; font-size:11pt }
-			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 10pt }
-			li { margin-top:0pt; margin-bottom:10pt }
-			h1 { margin-top:24pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:14pt; font-weight:bold; color:#365f91 }
-			h2 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:13pt; font-weight:bold; color:#4f81bd }
-			h3 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:bold; color:#4f81bd }
-			h4 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:bold; font-style:italic; color:#4f81bd }
-			h5 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:normal; color:#243f60 }
-			h6 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:normal; font-style:italic; color:#243f60 }
-			.Heading7 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:11pt; font-weight:normal; font-style:italic; color:#404040 }
-			.Heading8 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:10pt; font-weight:normal; color:#4f81bd }
-			.Heading9 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:10pt; font-weight:normal; font-style:italic; color:#404040 }
-			.BodyText { margin-bottom:6pt; line-height:115%; font-size:11pt }
-			.BodyText2 { margin-bottom:6pt; line-height:200%; font-size:11pt }
-			.BodyText3 { margin-bottom:6pt; line-height:115%; font-size:8pt }
-			.Caption { margin-bottom:10pt; line-height:normal; font-size:9pt; font-weight:bold; color:#4f81bd }
-			.Footer { margin-bottom:0pt; line-height:normal; font-size:11pt }
-			.Header { margin-bottom:0pt; line-height:normal; font-size:11pt }
-			.IntenseQuote { margin:10pt 46.8pt 14pt; line-height:115%; border-bottom:0.75pt solid #4f81bd; padding-bottom:4pt; font-size:11pt; font-weight:bold; font-style:italic; color:#4f81bd }
-			.List { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.List2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.List3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListBullet { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListBullet2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListBullet3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListContinue { margin-left:18pt; margin-bottom:6pt; line-height:115%; font-size:11pt }
-			.ListContinue2 { margin-left:36pt; margin-bottom:6pt; line-height:115%; font-size:11pt }
-			.ListContinue3 { margin-left:54pt; margin-bottom:6pt; line-height:115%; font-size:11pt }
-			.ListNumber { margin-left:18pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListNumber2 { margin-left:36pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListNumber3 { margin-left:54pt; margin-bottom:10pt; text-indent:-18pt; line-height:115%; font-size:11pt }
-			.ListParagraph { margin-left:36pt; margin-bottom:10pt; line-height:115%; font-size:11pt }
-			.MacroText { margin-bottom:10pt; line-height:115%; font-family:Courier; font-size:10pt }
-			.NoSpacing { margin-bottom:0pt; line-height:normal; font-size:11pt }
-			.Quote { margin-bottom:10pt; line-height:115%; font-size:11pt; font-style:italic; color:#000000 }
-			.Subtitle { margin-bottom:10pt; line-height:115%; font-family:Calibri; font-size:12pt; font-style:italic; letter-spacing:0.75pt; color:#4f81bd }
-			.TOCHeading { margin-top:24pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-family:Calibri; font-size:14pt; font-weight:bold; color:#365f91 }
-			.Title { margin-bottom:15pt; line-height:normal; border-bottom:1pt solid #4f81bd; padding-bottom:4pt; font-family:Calibri; font-size:26pt; letter-spacing:0.25pt; color:#17365d }
-			span.BodyText3Char { font-size:8pt }
-			span.BookTitle { font-weight:bold; font-variant:small-caps; letter-spacing:0.25pt }
-			span.Emphasis { font-style:italic }
-			span.Heading1Char { font-family:Calibri; font-size:14pt; font-weight:bold; color:#365f91 }
-			span.Heading2Char { font-family:Calibri; font-size:13pt; font-weight:bold; color:#4f81bd }
-			span.Heading3Char { font-family:Calibri; font-weight:bold; color:#4f81bd }
-			span.Heading4Char { font-family:Calibri; font-weight:bold; font-style:italic; color:#4f81bd }
-			span.Heading5Char { font-family:Calibri; color:#243f60 }
-			span.Heading6Char { font-family:Calibri; font-style:italic; color:#243f60 }
-			span.Heading7Char { font-family:Calibri; font-style:italic; color:#404040 }
-			span.Heading8Char { font-family:Calibri; font-size:10pt; color:#4f81bd }
-			span.Heading9Char { font-family:Calibri; font-size:10pt; font-style:italic; color:#404040 }
-			span.IntenseEmphasis { font-weight:bold; font-style:italic; color:#4f81bd }
-			span.IntenseQuoteChar { font-weight:bold; font-style:italic; color:#4f81bd }
-			span.IntenseReference { font-weight:bold; font-variant:small-caps; text-decoration:underline; letter-spacing:0.25pt; color:#c0504d }
-			span.MacroTextChar { font-family:Courier; font-size:10pt }
-			span.QuoteChar { font-style:italic; color:#000000 }
-			span.Strong { font-weight:bold }
-			span.SubtitleChar { font-family:Calibri; font-size:12pt; font-style:italic; letter-spacing:0.75pt; color:#4f81bd }
-			span.SubtleEmphasis { font-style:italic; color:#808080 }
-			span.SubtleReference { font-variant:small-caps; text-decoration:underline; color:#c0504d }
-			span.TitleChar { font-family:Calibri; font-size:26pt; letter-spacing:0.25pt; color:#17365d }
-@media (max-width: 900px) { 
-img { 
-   max-width: 100%;
-   height: auto;
-}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi niña hermosa ❤️</title>
+    <!-- Importar Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <!-- Librería de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-.table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #fdf6e3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5cece' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: #4a4a4a;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+        h1, h2, .elegant-font { font-family: 'Playfair Display', serif; }
+        .handwritten { font-family: 'Dancing Script', cursive; }
 
-td, th {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-}	
+        .card-shadow {
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+        }
 
+        /* Animación del regalo */
+        .gift-box { cursor: pointer; transition: transform 0.2s; }
+        .gift-box:active { transform: scale(0.9); }
+        .shake { animation: shake 0.5s; }
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(8deg); }
+            50% { transform: rotate(-8deg); }
+            75% { transform: rotate(8deg); }
+        }
 
-		</style>
-	</head>
-	<body>
-			<h1>
-				Index.html
-			</h1>
-			<p style="line-height:115%; font-size:9pt">
-				<span style="font-family:'Courier New'">&lt;!DOCTYPE html&gt;</span><br /><span style="font-family:'Courier New'">&lt;html lang="es"&gt;</span><br /><span style="font-family:'Courier New'">&lt;head&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;meta charset="UTF-8"&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;title&gt;Para mi niña hermosa ❤️&lt;/title&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;!-- Importar Tailwind CSS --&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;!-- Fuentes elegantes --&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Dancing+Script:wght@600&amp;display=swap" rel="stylesheet"&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;!-- Librería de confeti --&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"&gt;&lt;/script&gt;</span><br /><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;style&gt;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">body {</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">font-family: 'Lora', serif;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">background-color: #fdf6e3;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">color: #4a4a4a;</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">}</span><br /><span style="font-family:'Courier New'">&#xa0;&#xa0;&#xa0; </span><span style="font-family:'Courier New'">&lt;/style&gt;</span><br /><span style="font-family:'Courier New'">&lt;/head&gt;</span><br /><span style="font-family:'Courier New'">&lt;body&gt;</span><br /><span style="font-family:'Courier New'">&lt;!-- (Código completo pegado aquí) --&gt;</span><br /><span style="font-family:'Courier New'">&lt;/body&gt;</span><br /><span style="font-family:'Courier New'">&lt;/html&gt;</span><br /><span style="font-size:11pt">&#xa0;</span>
-			</p>
-	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Convertido a HTML con WordToHTML.net</a><span style="font-size:11px; color: #d0d0d0"> | </span><a href="https://documentconverter.pro/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Convertidor de Documentos para Windows</a></p>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4581d6a58cf94e929fad52deda295622","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+        /* Estilo sobre de carta */
+        .letter-container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+            box-shadow: inset 0 0 100px rgba(220, 180, 180, 0.1), 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .letter-text {
+            line-height: 1.8;
+            color: #3d3d3d;
+            font-size: 1.05rem;
+            white-space: pre-wrap; 
+            text-align: left;
+        }
+
+        /* Cupón */
+        .coupon {
+            border: 3px dashed #d4af37;
+            background-color: #fffaf0;
+            position: relative;
+            margin-top: 40px;
+        }
+        .coupon::before, .coupon::after {
+            content: '';
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            background-color: #fff1f2;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .coupon::before { left: -14px; }
+        .coupon::after { right: -14px; }
+
+        .hidden-step { display: none; opacity: 0; }
+        .fade-in { animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        .distance-badge {
+            display: inline-block;
+            background: #ffe4e6;
+            color: #e11d48;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen w-full flex flex-col justify-start items-center p-4 py-12">
+
+    <!-- PASO 1: LA PROPUESTA -->
+    <main id="step-1" class="my-auto z-10 text-center p-8 max-w-lg w-full bg-white rounded-3xl card-shadow border-b-8 border-rose-400 fade-in">
+        <div class="mb-6 mx-auto w-48 h-48">
+            <img 
+                src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" 
+                alt="Ositos cariñosos" 
+                class="w-full h-full object-contain"
+            >
+        </div>
+
+        <h1 class="text-3xl md:text-4xl text-rose-700 mb-4 font-bold italic">
+            Hola, mi vida...
+        </h1>
+        <p class="text-lg text-gray-700 mb-8 font-medium">
+            Tengo una pregunta muy importante que hacerte... ¿Quieres ser mi San Valentín este año?
+        </p>
+
+        <div class="flex flex-col items-center gap-4">
+            <button id="yesBtn" class="transition-all duration-300 bg-rose-600 hover:bg-rose-700 text-white font-bold py-4 px-12 rounded-full text-xl shadow-lg z-20">
+                ¡Sí, acepto! 💖
+            </button>
+            <button id="noBtn" class="transition-all duration-200 bg-gray-200 text-gray-500 font-medium py-2 px-6 rounded-full text-sm z-10">
+                No
+            </button>
+        </div>
+    </main>
+
+    <!-- PASO 2: EL REGALO -->
+    <div id="step-2" class="hidden-step flex-col items-center justify-center text-center my-auto">
+        <h2 class="text-2xl text-rose-700 mb-6 elegant-font italic">¡Sabía que dirías que sí! <br> Abre tu sorpresa de San Valentín...</h2>
+        <div id="gift-container" class="gift-box relative w-64 h-64 flex items-center justify-center">
+            <svg id="gift-svg" class="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="8" width="18" height="12" rx="2" fill="#E11D48"/>
+                <rect x="2" y="5" width="20" height="3" rx="1" fill="#FB7185"/>
+                <rect x="11" y="5" width="2" height="15" fill="#D4AF37"/>
+                <path d="M12 5C12 5 10 2 7 2C4 2 4 5 7 5H12ZM12 5C12 5 14 2 17 2C20 2 20 5 17 5H12Z" fill="#D4AF37"/>
+            </svg>
+            <div class="absolute -top-4 right-0 bg-white shadow-md rounded-full px-3 py-1 text-xs font-bold text-rose-500 animate-bounce">
+                ¡Tócame!
+            </div>
+        </div>
+        <p id="click-counter" class="mt-6 text-gray-500 font-medium">Quedan <span id="clicks-left">3</span> clics</p>
+    </div>
+
+    <!-- PASO 3: CARTA Y CUPÓN -->
+    <div id="step-3" class="hidden-step flex-col items-center w-full max-w-2xl text-center py-4">
+        
+        <div class="distance-badge italic">Feliz San Valentín a la distancia 🌹❤️</div>
+        
+        <div class="letter-container w-full mb-10 fade-in">
+            <div class="flex justify-between items-center mb-8 border-b pb-4">
+                <h2 class="text-3xl text-rose-700 handwritten">Para mi niña hermosa,</h2>
+                <span class="text-gray-400 text-xs italic">San Valentín, 2026</span>
+            </div>
+            
+            <div class="letter-text italic">
+Incluso cuando creas que ya no seré capaz de amarte más de lo que te amo , seguiré demostrandote mi amor , porque realmente eres mi mundo y hoy en este día especial solo quiero decirte que aunque estemos a kilómetros de distancia eres mi primer pensamiento al despertar y el último al irme a dormir, amo como eres , tú personalidad, y amo más saber que soy el chico que amas , eso me hace feliz, a pesar de que últimamente no hemos podido hablar mucho no porque no queramos si no por cuestiones de estudios y eso lo comprendo, aunque aveces me ponga triste porque no podamos hablar, se que ganas no faltan, amo escucharte reír, amo tus ojitos, amo tus labios , tus besos aunque haya pasado mucho tiempo sigo recordandolo como si hubiera sido ayer, amo escuchar tú voz sabes porque?, porque cuando te escucho me siento en el lugar donde siempre quiero estar, eres mi persona favorita en esta vida, y no sabes cuánto anhelo que ya se termine está distancia para poder pasar un san valentin juntos, pero seré fuerte para poder lograr todas las metas y sueños que tenemos juntos, me seguiré esforzando por ser mejor.
+
+Sabes ? Aveces me pongo a pensar , porque no te conocí antes , hubieras echo mi vida más feliz desde antes , pero bueno talvez llegaste en el momento indicado, talvez así lo decidió el destino, pero estoy agradecido con la vida por haberme permitido conocerte hoy que es día del amor, eres única y es lo que más amo de ti , realmente estoy orgulloso de ti porque se lo mucho que te esfuerzas todos los días eh incluso hay días que te das el tiempo para mí, lo valoro mucho, quiero que sepas que siempre confiaré en ti y en lo que puedes lograr, estaré ahí aunque sea para darte unas palabras de aliento, porque eso hacen las personas que se aman de verdad, te juro que cada cosa que hago es para verte feliz y para que sepas que eres lo más importante para mi, te amo corazón.
+
+<span class="text-rose-600 block mt-6">Pst: Jhamir dice que extraña tus labios porque son su curita del corazón, extraño tus abrazos, fueron los mejores y no estoy exagerando, eres tú la persona que elegí amar corazón, te amo mi niña estoy orgulloso de ti y feliz san valentin!</span>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-rose-100 flex flex-col items-end">
+                <p class="text-gray-500 italic">Siempre tuyo,</p>
+                <p class="text-2xl text-rose-700 handwritten font-bold">Jhamir</p>
+            </div>
+        </div>
+
+        <!-- Cupón de Regalo -->
+        <div class="coupon p-8 rounded-xl max-w-md w-full mx-auto shadow-xl mb-10 fade-in">
+            <h3 class="text-2xl elegant-font text-amber-600 font-bold mb-2">🎁 REGALO DE SAN VALENTÍN 🎁</h3>
+            <div class="bg-white p-6 rounded border border-amber-100 relative">
+                <p class="text-gray-600 mb-2 uppercase tracking-widest text-xs font-bold">Válido por:</p>
+                <p class="text-3xl font-extrabold text-rose-600 elegant-font">Maquillaje & Chocolates</p>
+                <div class="my-4 border-t border-gray-100"></div>
+                <p class="text-gray-500 italic text-sm">
+                    Canjeable con Jhamir. <br>
+                    ¡Porque te mereces todo hoy y siempre!
+                </p>
+            </div>
+            <p class="text-[10px] text-gray-400 mt-4 uppercase tracking-tighter">Válido para todo el mes del amor • San Valentín 2026</p>
+        </div>
+
+        <!-- Botón de Respuesta WhatsApp -->
+        <div class="fade-in mb-12 flex flex-col items-center">
+            <p class="text-rose-700 font-bold mb-4 elegant-font italic text-xl text-center">¿Tienes una respuesta para mí? ✨</p>
+            <a id="whatsappLink" href="https://w.app/p92smd" target="_blank" class="whatsapp-btn flex items-center gap-2 px-8 py-4 rounded-full font-bold text-lg shadow-lg">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.887.002-5.462-4.415-9.89-9.881-9.891-5.446 0-9.886 4.438-9.889 9.887-.001 2.22.634 4.385 1.835 6.204l-.366 1.336-.312 1.139 1.157-.303 1.177-.309zM15.445 15.341c-.244-.122-1.442-.712-1.664-.792-.223-.081-.385-.122-.547.122-.162.244-.629.792-.771.954-.142.162-.284.183-.528.061-.244-.122-1.029-.379-1.96-1.21-.724-.645-1.213-1.442-1.355-1.686-.142-.244-.015-.376.107-.497.11-.109.244-.285.366-.427.122-.142.162-.244.244-.406.081-.162.041-.305-.02-.427-.061-.122-.547-1.319-.75-1.81-.198-.477-.398-.411-.547-.411-.142-.001-.305-.001-.467-.001-.162 0-.427.061-.65.284-.223.244-.852.833-.852 2.031 0 1.199.873 2.356.995 2.518.122.162 1.717 2.622 4.16 3.676.581.25 1.034.4 1.388.513.584.186 1.114.16 1.534.097.468-.071 1.442-.589 1.644-1.158.203-.569.203-1.057.142-1.158-.061-.101-.223-.162-.467-.284z"/></svg>
+                Enviar respuesta por WhatsApp
+            </a>
+        </div>
+
+        <button onclick="location.reload()" class="text-rose-300 text-sm underline pb-10">Ver de nuevo</button>
+    </div>
+
+    <script>
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const step3 = document.getElementById('step-3');
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const giftContainer = document.getElementById('gift-container');
+        const clicksLeftSpan = document.getElementById('clicks-left');
+
+        let noCount = 0;
+        let yesFontSize = 1.25;
+        let giftClicks = 0;
+
+        noBtn.addEventListener('click', () => {
+            noCount++;
+            yesFontSize *= 1.5;
+            yesBtn.style.fontSize = `${yesFontSize}rem`;
+            yesBtn.style.padding = `${yesFontSize * 0.5}rem ${yesFontSize * 1.5}rem`;
+            const phrases = ["¿Segura?", "Piénsalo bien...", "¿De verdad?", "Di que síii", "No puedes decir no 😎"];
+            noBtn.innerText = phrases[Math.min(noCount, phrases.length - 1)];
+            if (noCount > 5) noBtn.style.display = 'none';
+        });
+
+        yesBtn.addEventListener('click', () => {
+            step1.classList.add('hidden-step');
+            setTimeout(() => {
+                step1.style.display = 'none';
+                step2.style.display = 'flex';
+                step2.classList.remove('hidden-step');
+                step2.classList.add('fade-in');
+                launchConfetti();
+            }, 300);
+        });
+
+        giftContainer.addEventListener('click', () => {
+            giftClicks++;
+            giftContainer.classList.add('shake');
+            setTimeout(() => giftContainer.classList.remove('shake'), 500);
+            let remaining = 3 - giftClicks;
+            clicksLeftSpan.innerText = remaining;
+            if (remaining <= 0) openGift();
+        });
+
+        function openGift() {
+            launchConfetti();
+            step2.classList.add('hidden-step');
+            setTimeout(() => {
+                step2.style.display = 'none';
+                step3.style.display = 'flex';
+                step3.classList.remove('hidden-step');
+                step3.classList.add('fade-in');
+                setTimeout(launchConfetti, 1000);
+            }, 300);
+        }
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#E11D48', '#D4AF37', '#FFFFFF']
+            });
+        }
+    </script>
 </body>
 </html>
+
